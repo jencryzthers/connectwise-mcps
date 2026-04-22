@@ -22,8 +22,20 @@ Security issues follow coordinated disclosure — see [SECURITY.md](./SECURITY.m
 Each MCP is a [Model Context Protocol](https://modelcontextprotocol.io)
 server that lets AI assistants (Claude Desktop, Claude Code, any
 MCP-aware client) interact with the corresponding ConnectWise product.
-Claude Desktop Extension (`.dxt`) bundles are attached to releases in
-this repo.
+
+### Claude Desktop Extension (.dxt) bundles
+
+Download the latest `.dxt` from [**Releases**](../../releases) and
+double-click to install into Claude Desktop. Releases are tagged per
+product so you can find the one you want:
+
+- `psa-vX.Y.Z` → ConnectWise PSA
+- `rmm-vX.Y.Z` → ConnectWise RMM + ScreenConnect
+- `cpq-vX.Y.Z` → ConnectWise CPQ
+
+Every release here mirrors an npm publish of the matching package —
+same version, same code, with the prebuilt `.dxt` attached as a release
+asset.
 
 ## Why is the source private?
 
