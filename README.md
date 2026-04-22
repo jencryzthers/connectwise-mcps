@@ -1,10 +1,11 @@
 # ConnectWise MCPs — issue tracker & landing page
 
 Public issue tracker and landing page for three MCP (Model Context Protocol)
-servers published on npm under the
-[`@goxtechnologies`](https://www.npmjs.com/~goxtechnologies) scope. The
-source code is maintained in private repositories; the npm tarballs are
-released under the MIT License.
+servers **maintained personally by [jencryzthers](https://github.com/jencryzthers)**
+and published on npm under the
+[`@goxtechnologies`](https://www.npmjs.com/~goxtechnologies) scope (the
+publishing identity). The source code is maintained in private
+repositories; the npm tarballs are released under the MIT License.
 
 If you're looking for bug reports, feature requests, or general questions
 about any of the MCPs, **[open an issue here](../../issues/new/choose)**.
@@ -37,12 +38,18 @@ Every release here mirrors an npm publish of the matching package —
 same version, same code, with the prebuilt `.dxt` attached as a release
 asset.
 
-## Why is the source private?
+## Who maintains this? Why is the source private?
 
-The source code is maintained privately by the publishing organisation
-(GOX Technologies Inc.). The npm tarballs are distributed under the MIT
-License — you are free to use, modify, and redistribute them per the
-license terms (see `LICENSE` inside each tarball).
+These MCPs are maintained **personally by [jencryzthers](https://github.com/jencryzthers)**
+on personal time. **GOX Technologies Inc.** is the npm scope owner
+(the publishing identity) but does not maintain, staff, or fund the
+development — this is not an organisational product.
+
+The source code lives in private repositories under the maintainer's
+personal account. The npm tarballs are distributed under the
+[MIT License](https://opensource.org/licenses/MIT) — you are free to
+use, modify, and redistribute them per the license terms (see `LICENSE`
+inside each tarball).
 
 Public issues, feature requests, and security advisories are handled
 here. If you need access to the source for a specific reason (audit,
@@ -62,17 +69,17 @@ PR, contribution), open an issue and we'll discuss.
 
 ## Support the maintainer
 
-These MCPs are maintained by a single person on personal time. If they
-save you time or headaches, a small contribution is genuinely
-appreciated:
+These MCPs are maintained by [jencryzthers](https://github.com/jencryzthers)
+personally on personal time. If they save you time or headaches, a
+small contribution is genuinely appreciated:
 
 💰 [**PayPal**](https://www.paypal.com/paypalme/jcproulx) — one-time,
 choose your amount.
 
-Donations go to the maintainer personally, not to GOX Technologies.
-Totally optional. **Zero impact on support or issue triage** — the MIT
-"AS IS" clause still applies. Think of it as buying the maintainer a
-coffee.
+Donations go directly to the maintainer, not to GOX Technologies (the
+npm scope owner). Totally optional. **Zero impact on support or issue
+triage** — the MIT "AS IS" clause still applies. Think of it as buying
+the maintainer a coffee.
 
 ---
 
@@ -97,10 +104,10 @@ permission notice.
 EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
 MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.**
 
-Neither GOX Technologies Inc. nor the maintainer is liable for any data
-loss, service disruption, unauthorized access, financial loss, or any
-other damage arising from your use of these MCPs. **Use at your own
-risk.**
+Neither the maintainer (jencryzthers) nor GOX Technologies Inc. (npm
+scope owner) is liable for any data loss, service disruption,
+unauthorized access, financial loss, or any other damage arising from
+your use of these MCPs. **Use at your own risk.**
 
 ### Experimental software
 
@@ -138,15 +145,16 @@ By using these MCPs, you accept full responsibility for:
   destructive command is your responsibility.
 - **Compliance with ConnectWise's terms.** Your use of the ConnectWise
   APIs is governed by your agreements with ConnectWise LLC. Neither
-  GOX Technologies nor the maintainer is responsible for any
+  the maintainer nor GOX Technologies is responsible for any
   ConnectWise Terms of Service violations resulting from your use of
   these MCPs.
 
 ### Data and privacy
 
-- **No telemetry.** These MCPs do not phone home. The maintainer has
-  **no access** to your API credentials, your ConnectWise data, or any
-  actions you perform through the software.
+- **No telemetry.** These MCPs do not phone home. Neither the
+  maintainer nor GOX Technologies has any access to your API
+  credentials, your ConnectWise data, or any actions you perform
+  through the software.
 - **Local state only.** Cached data (SQLite catalogues, saved queries,
   browser state for the PSA web scraper) is stored entirely under
   `~/.config/connectwise-<product>/` on the user's machine. Nothing
@@ -165,7 +173,7 @@ registered trademarks of **ConnectWise LLC**.
 
 These packages are **NOT** official ConnectWise products. They are
 **NOT** developed, endorsed, sponsored, certified, or approved by
-ConnectWise LLC. Neither GOX Technologies Inc. nor the maintainer has
+ConnectWise LLC. Neither the maintainer nor GOX Technologies Inc. has
 any affiliation with ConnectWise LLC. These marks are referenced
 solely to identify the third-party APIs this software interoperates
 with.
@@ -222,5 +230,6 @@ This landing repo itself is MIT-licensed (see [LICENSE](./LICENSE)).
 Each npm package ships its own `LICENSE` file — see the tarball
 contents for the authoritative copy.
 
-Copyright © 2024–2026 GOX Technologies Inc. Published packages are
-MIT-licensed; source code is maintained privately.
+Copyright © 2024–2026 jencryzthers (maintainer). Published under the
+`@goxtechnologies` npm scope. Packages are MIT-licensed; source code
+is maintained privately by the maintainer.
