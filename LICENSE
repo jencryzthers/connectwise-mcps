@@ -1,0 +1,31 @@
+MIT License
+
+Copyright (c) 2024-2026 GOX Technologies Inc.
+
+Public issue tracker and landing page for the ConnectWise MCP suite
+(`@goxtechnologies/connectwise-psa-mcp`, `@goxtechnologies/connectwise-rmm-mcp`,
+`@goxtechnologies/connectwise-cpq-mcp`).
+
+"ConnectWise", "ConnectWise PSA", "Manage", "ConnectWise RMM", "Asio",
+"ScreenConnect", "Control", "ConnectWise CPQ", "Quosal", and "Sell" are
+trademarks of ConnectWise LLC. This project is an independent, community
+integration and is not affiliated with, endorsed by, or sponsored by
+ConnectWise LLC.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
