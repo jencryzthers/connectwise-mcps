@@ -78,6 +78,17 @@ contribution), open an issue and we'll discuss.
   corresponding product repo, or email the maintainer. **Do not** open a
   public issue.
 
+## Support the maintainer
+
+These MCPs are maintained by a single person on personal time. If they save
+you time or headaches, a small [**GitHub Sponsors**](https://github.com/sponsors/jencryzthers)
+contribution is genuinely appreciated — goes to the maintainer directly,
+not to GOX Technologies.
+
+Totally optional. Zero impact on support or issue triage — the MIT
+"AS IS" clause still applies. Think of it as buying the maintainer a
+coffee.
+
 ## License
 
 This landing repo itself is MIT-licensed. Each npm package ships its own
