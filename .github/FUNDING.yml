@@ -2,13 +2,11 @@
 # Technologies Inc. (the publishing organisation). They are a thank-you,
 # not a support contract — the "AS IS" clause of MIT still applies.
 
-github: jencryzthers
-
-# PayPal.Me — simplest one-time donation path
 custom:
   - "https://www.paypal.com/paypalme/jcproulx"
 
 # Other platforms you can add later by uncommenting:
+# github: jencryzthers
 # buy_me_a_coffee: jencryzthers
 # ko_fi: jencryzthers
 # patreon: jencryzthers

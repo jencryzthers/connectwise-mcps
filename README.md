@@ -1,96 +1,214 @@
 # ConnectWise MCPs — issue tracker & landing page
 
-This repository is a **public issue tracker and landing page** for the
-three ConnectWise MCPs published on npm under the
+Public issue tracker and landing page for three MCP (Model Context Protocol)
+servers published on npm under the
 [`@goxtechnologies`](https://www.npmjs.com/~goxtechnologies) scope. The
-source code for each MCP and its Claude Code plugin companion is
-maintained in private repositories; the npm tarballs are released under
-the MIT License.
+source code is maintained in private repositories; the npm tarballs are
+released under the MIT License.
 
 If you're looking for bug reports, feature requests, or general questions
 about any of the MCPs, **[open an issue here](../../issues/new/choose)**.
-Security issues follow the coordinated-disclosure process documented in
-each project — please **do not** open a public issue for a security
-concern.
+Security issues follow coordinated disclosure — see [SECURITY.md](./SECURITY.md).
+**Do not** open a public issue for a security concern.
 
 ## Packages
 
-| Product | MCP (npm) | DXT installer | Plugin name |
-|---|---|---|---|
-| **ConnectWise PSA** (Manage) | [`@goxtechnologies/connectwise-psa-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-psa-mcp) | `.dxt` attached to GitHub Releases | `connectwise-psa` |
-| **ConnectWise RMM** (Asio) + ScreenConnect | [`@goxtechnologies/connectwise-rmm-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-rmm-mcp) | `.dxt` on Releases | `connectwise-rmm` |
-| **ConnectWise CPQ** (Quosal Sell) | [`@goxtechnologies/connectwise-cpq-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-cpq-mcp) | `.dxt` on Releases | `connectwise-cpq` |
-
-## What these are
+| Product | npm package | Install |
+|---|---|---|
+| **ConnectWise PSA** (Manage) | [`@goxtechnologies/connectwise-psa-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-psa-mcp) | `npx -y @goxtechnologies/connectwise-psa-mcp` |
+| **ConnectWise RMM** (Asio) + ScreenConnect | [`@goxtechnologies/connectwise-rmm-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-rmm-mcp) | `npx -y @goxtechnologies/connectwise-rmm-mcp` |
+| **ConnectWise CPQ** (Quosal Sell) | [`@goxtechnologies/connectwise-cpq-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-cpq-mcp) | `npx -y @goxtechnologies/connectwise-cpq-mcp` |
 
 Each MCP is a [Model Context Protocol](https://modelcontextprotocol.io)
-server that lets AI assistants (Claude Code, Claude Desktop, any MCP-aware
-client) interact with the corresponding ConnectWise product. The plugins
-wrap the MCPs with agents, slash commands, skills, and safety hooks
-tailored for MSP technicians.
-
-Published under MIT License. Independent community project, **not
-affiliated with, endorsed by, or sponsored by ConnectWise LLC**.
-"ConnectWise", "ConnectWise PSA", "Manage", "ConnectWise RMM", "Asio",
-"ScreenConnect", "Control", "ConnectWise CPQ", "Quosal", and "Sell" are
-trademarks of ConnectWise LLC.
-
-## Install
-
-Each MCP can be launched directly via `npx` (no install needed):
-
-```bash
-npx -y @goxtechnologies/connectwise-psa-mcp
-npx -y @goxtechnologies/connectwise-rmm-mcp
-npx -y @goxtechnologies/connectwise-cpq-mcp
-```
-
-For Claude Code plugin install (requires access to the companion private
-repos — contact the maintainer if you want access):
-
-```
-/plugin marketplace add jencryzthers/gox-marketplace
-/plugin install connectwise-psa@connectwise
-/plugin install connectwise-rmm@connectwise
-/plugin install connectwise-cpq@connectwise
-```
+server that lets AI assistants (Claude Desktop, Claude Code, any
+MCP-aware client) interact with the corresponding ConnectWise product.
+Claude Desktop Extension (`.dxt`) bundles are attached to releases in
+this repo.
 
 ## Why is the source private?
 
-The source code is maintained in private repositories by the publishing
-organisation. The npm tarballs are released under the MIT License — you
-are free to use, modify, and redistribute them per the license terms (see
-`LICENSE` inside each tarball).
+The source code is maintained privately by the publishing organisation
+(GOX Technologies Inc.). The npm tarballs are distributed under the MIT
+License — you are free to use, modify, and redistribute them per the
+license terms (see `LICENSE` inside each tarball).
 
 Public issues, feature requests, and security advisories are handled
-here. If you need access to the source for a specific reason (audit, PR,
-contribution), open an issue and we'll discuss.
+here. If you need access to the source for a specific reason (audit,
+PR, contribution), open an issue and we'll discuss.
 
 ## Filing an issue
 
-- **Bug in a specific MCP?** Pick the matching template (PSA / RMM / CPQ
-  bug report). Include version, Node.js version, Claude client, and
-  redacted logs. See the template for redaction guidance.
+- **Bug in a specific MCP?** Pick the matching template (PSA / RMM /
+  CPQ). Include version, Node.js version, Claude client, and redacted
+  logs.
 - **Feature request?** Use the feature request template. If it's a new
   named operation, reference the ConnectWise API endpoint it would map
   to.
-- **Security concern?** Use **Security → Report a vulnerability** on the
-  corresponding product repo, or email the maintainer. **Do not** open a
-  public issue.
+- **Security concern?** Use **Security → Report a vulnerability** on
+  this repo, or see [SECURITY.md](./SECURITY.md) for routing to
+  per-product policies. **Do not** open a public issue.
 
 ## Support the maintainer
 
-These MCPs are maintained by a single person on personal time. If they save
-you time or headaches, a small contribution is genuinely appreciated:
+These MCPs are maintained by a single person on personal time. If they
+save you time or headaches, a small contribution is genuinely
+appreciated:
 
-- ☕ [**GitHub Sponsors**](https://github.com/sponsors/jencryzthers) — recurring or one-time, 0% platform fees
-- 💰 [**PayPal**](https://www.paypal.com/paypalme/jcproulx) — one-time, choose your amount
+💰 [**PayPal**](https://www.paypal.com/paypalme/jcproulx) — one-time,
+choose your amount.
 
-Goes to the maintainer personally, not to GOX Technologies. Totally
-optional. Zero impact on support or issue triage — the MIT "AS IS"
-clause still applies. Think of it as buying the maintainer a coffee.
+Donations go to the maintainer personally, not to GOX Technologies.
+Totally optional. **Zero impact on support or issue triage** — the MIT
+"AS IS" clause still applies. Think of it as buying the maintainer a
+coffee.
+
+---
+
+## Legal notices and responsibilities
+
+These are the shared terms for all three MCPs in this suite. They
+supplement — and in case of conflict, are subordinate to — the MIT
+License in each package's tarball.
+
+### MIT License
+
+Each of the three packages is released under the
+[MIT License](https://opensource.org/licenses/MIT). The full license
+text ships inside every npm tarball (`LICENSE` file). You may use,
+modify, merge, publish, distribute, sublicense, and/or sell copies of
+the software freely, subject to including the copyright notice and
+permission notice.
+
+### No warranty — "AS IS"
+
+**THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.**
+
+Neither GOX Technologies Inc. nor the maintainer is liable for any data
+loss, service disruption, unauthorized access, financial loss, or any
+other damage arising from your use of these MCPs. **Use at your own
+risk.**
+
+### Experimental software
+
+These MCPs are an active experiment in AI-assisted MSP operations. The
+core tools (API calls, ticket/device/quote queries, named operations)
+are well-tested and used daily by the maintainer. Many analytics
+handlers and advanced features have seen limited real-world testing.
+Features may be added, changed, or removed without notice between
+versions.
+
+**This software is NOT a substitute for professional judgment.** All
+outputs, recommendations, and actions should be independently verified
+by qualified IT professionals before being relied upon. When used with
+an AI assistant, the model may propose or execute actions that are
+incorrect, incomplete, or destructive — **human review of all
+AI-proposed actions is strongly recommended.**
+
+### Your responsibilities as a user
+
+By using these MCPs, you accept full responsibility for:
+
+- **Credentials.** You obtain, store, rotate, and secure your own
+  ConnectWise API credentials. Never commit them. Use
+  minimum-privilege keys scoped to only the endpoints you need.
+- **Actions performed.** These MCPs can create, modify, and delete
+  records in your ConnectWise PSA, RMM, and CPQ instances — tickets,
+  time entries, agreements, endpoints, quotes, customers. **You bear
+  full responsibility for every action performed through this
+  software**, including actions initiated by an AI assistant acting
+  via the MCP.
+- **Remote command execution** (RMM/ScreenConnect). The RMM MCP can
+  execute arbitrary shell commands on live customer endpoints via
+  ScreenConnect. Confirmation gates are in place, but ultimately
+  **you** decide what gets run. A hook bypass or an approved
+  destructive command is your responsibility.
+- **Compliance with ConnectWise's terms.** Your use of the ConnectWise
+  APIs is governed by your agreements with ConnectWise LLC. Neither
+  GOX Technologies nor the maintainer is responsible for any
+  ConnectWise Terms of Service violations resulting from your use of
+  these MCPs.
+
+### Data and privacy
+
+- **No telemetry.** These MCPs do not phone home. The maintainer has
+  **no access** to your API credentials, your ConnectWise data, or any
+  actions you perform through the software.
+- **Local state only.** Cached data (SQLite catalogues, saved queries,
+  browser state for the PSA web scraper) is stored entirely under
+  `~/.config/connectwise-<product>/` on the user's machine. Nothing
+  leaves your environment unless you explicitly ship it.
+- **Credentials file permissions.** Each MCP refuses to load a `.env`
+  file whose permissions allow group/world read. This is a defensive
+  default — it's on you to actually `chmod 600` the file and keep it
+  out of version control.
+
+### ConnectWise trademark notice
+
+"ConnectWise", "ConnectWise PSA", "ConnectWise Manage", "ConnectWise
+RMM", "ConnectWise Asio", "ConnectWise ScreenConnect", "ConnectWise
+Control", "ConnectWise CPQ", "Quosal", and "Sell" are trademarks or
+registered trademarks of **ConnectWise LLC**.
+
+These packages are **NOT** official ConnectWise products. They are
+**NOT** developed, endorsed, sponsored, certified, or approved by
+ConnectWise LLC. Neither GOX Technologies Inc. nor the maintainer has
+any affiliation with ConnectWise LLC. These marks are referenced
+solely to identify the third-party APIs this software interoperates
+with.
+
+### ConnectWise API licensing (your own)
+
+To use these MCPs you must hold your own valid ConnectWise PSA,
+ConnectWise RMM, ConnectWise ScreenConnect, and/or ConnectWise CPQ
+license and API credentials, as applicable. These MCPs do not grant,
+transfer, or imply any license to ConnectWise's software or APIs.
+
+### AI-assisted operation disclaimer
+
+When used with an AI assistant (Claude, GPT, or any other LLM), the
+assistant may propose or execute actions based on its interpretation
+of your request and the data returned by the MCP. **The assistant is
+not guaranteed to be correct.** Examples of what can go wrong:
+
+- Wrong ticket updated after ambiguous phrasing
+- Wrong endpoint targeted by a remote command
+- Time entry created against the wrong charge code
+- Quote sent to the wrong customer
+- Destructive operation (delete, uninstall) approved because the
+  confirmation prompt wasn't read carefully
+
+Every confirmation prompt exists because something real can be broken.
+Read them before approving.
+
+### Third-party dependencies
+
+These MCPs bundle open-source packages governed by their own licenses:
+
+- [better-sqlite3](https://github.com/WiseLibs/better-sqlite3) — MIT
+- [@modelcontextprotocol/sdk](https://github.com/modelcontextprotocol/typescript-sdk) — MIT
+- [zod](https://github.com/colinhacks/zod) — MIT
+- [express](https://github.com/expressjs/express) — MIT (PSA + RMM MCPs)
+- [js-yaml](https://github.com/nodeca/js-yaml) — MIT (RMM MCP)
+
+Full `package-lock.json` files are available on request (open an issue
+mentioning "dependency audit").
+
+### Governing law
+
+The MIT License is governed by its own terms. For any other dispute
+arising from use of these MCPs, the parties agree to
+**Québec, Canada** as the jurisdiction, without prejudice to your
+rights under applicable consumer protection laws.
+
+---
 
 ## License
 
-This landing repo itself is MIT-licensed. Each npm package ships its own
-`LICENSE` file — see the tarball contents.
+This landing repo itself is MIT-licensed (see [LICENSE](./LICENSE)).
+Each npm package ships its own `LICENSE` file — see the tarball
+contents for the authoritative copy.
+
+Copyright © 2024–2026 GOX Technologies Inc. Published packages are
+MIT-licensed; source code is maintained privately.
