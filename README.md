@@ -81,13 +81,14 @@ contribution), open an issue and we'll discuss.
 ## Support the maintainer
 
 These MCPs are maintained by a single person on personal time. If they save
-you time or headaches, a small [**GitHub Sponsors**](https://github.com/sponsors/jencryzthers)
-contribution is genuinely appreciated — goes to the maintainer directly,
-not to GOX Technologies.
+you time or headaches, a small contribution is genuinely appreciated:
 
-Totally optional. Zero impact on support or issue triage — the MIT
-"AS IS" clause still applies. Think of it as buying the maintainer a
-coffee.
+- ☕ [**GitHub Sponsors**](https://github.com/sponsors/jencryzthers) — recurring or one-time, 0% platform fees
+- 💰 [**PayPal**](https://www.paypal.com/paypalme/jcproulx) — one-time, choose your amount
+
+Goes to the maintainer personally, not to GOX Technologies. Totally
+optional. Zero impact on support or issue triage — the MIT "AS IS"
+clause still applies. Think of it as buying the maintainer a coffee.
 
 ## License
 
