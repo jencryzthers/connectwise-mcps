@@ -1,6 +1,6 @@
 # ConnectWise MCPs — issue tracker & landing page
 
-Public issue tracker and landing page for three MCP (Model Context Protocol)
+Public issue tracker and landing page for four MCP (Model Context Protocol)
 servers **maintained personally by [jencryzthers](https://github.com/jencryzthers)**
 and published on npm under the
 [`@goxtechnologies`](https://www.npmjs.com/~goxtechnologies) scope (the
@@ -19,10 +19,19 @@ Security issues follow coordinated disclosure — see [SECURITY.md](./SECURITY.m
 | **ConnectWise PSA** (Manage) | [`@goxtechnologies/connectwise-psa-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-psa-mcp) | `npx -y @goxtechnologies/connectwise-psa-mcp` |
 | **ConnectWise RMM** (Asio) + ScreenConnect | [`@goxtechnologies/connectwise-rmm-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-rmm-mcp) | `npx -y @goxtechnologies/connectwise-rmm-mcp` |
 | **ConnectWise CPQ** (Quosal Sell) | [`@goxtechnologies/connectwise-cpq-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-cpq-mcp) | `npx -y @goxtechnologies/connectwise-cpq-mcp` |
+| **ConnectWise Home** (partner identity portal) — *experimental* | [`@goxtechnologies/connectwise-home-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-home-mcp) | `npx -y @goxtechnologies/connectwise-home-mcp` |
 
 Each MCP is a [Model Context Protocol](https://modelcontextprotocol.io)
 server that lets AI assistants (Claude Desktop, Claude Code, any
 MCP-aware client) interact with the corresponding ConnectWise product.
+
+**ConnectWise Home** is flagged as experimental because it targets
+`home.connectwise.com` — a portal with **no public API**. The package
+uses Playwright to drive an authenticated browser session, reuses the
+portal's own OIDC bearer token for API calls, and scrapes the Salesforce
+Experience Cloud DOM for partner-support cases. Requires Playwright as
+an optional peer dependency (`npm install playwright && npx playwright
+install chromium`).
 
 ### Claude Desktop Extension (.dxt) bundles
 
@@ -33,6 +42,7 @@ product so you can find the one you want:
 - `psa-vX.Y.Z` → ConnectWise PSA
 - `rmm-vX.Y.Z` → ConnectWise RMM + ScreenConnect
 - `cpq-vX.Y.Z` → ConnectWise CPQ
+- `home-vX.Y.Z` → ConnectWise Home (experimental)
 
 Every release here mirrors an npm publish of the matching package —
 same version, same code, with the prebuilt `.dxt` attached as a release
@@ -58,8 +68,8 @@ PR, contribution), open an issue and we'll discuss.
 ## Filing an issue
 
 - **Bug in a specific MCP?** Pick the matching template (PSA / RMM /
-  CPQ). Include version, Node.js version, Claude client, and redacted
-  logs.
+  CPQ / Home). Include version, Node.js version, Claude client, and
+  redacted logs.
 - **Feature request?** Use the feature request template. If it's a new
   named operation, reference the ConnectWise API endpoint it would map
   to.
@@ -133,11 +143,12 @@ By using these MCPs, you accept full responsibility for:
   ConnectWise API credentials. Never commit them. Use
   minimum-privilege keys scoped to only the endpoints you need.
 - **Actions performed.** These MCPs can create, modify, and delete
-  records in your ConnectWise PSA, RMM, and CPQ instances — tickets,
-  time entries, agreements, endpoints, quotes, customers. **You bear
-  full responsibility for every action performed through this
-  software**, including actions initiated by an AI assistant acting
-  via the MCP.
+  records in your ConnectWise PSA, RMM, CPQ, and Home instances —
+  tickets, time entries, agreements, endpoints, quotes, customers,
+  **user accounts** (invite, disable, delete), roles, and support
+  cases. **You bear full responsibility for every action performed
+  through this software**, including actions initiated by an AI
+  assistant acting via the MCP.
 - **Remote command execution** (RMM/ScreenConnect). The RMM MCP can
   execute arbitrary shell commands on live customer endpoints via
   ScreenConnect. Confirmation gates are in place, but ultimately
@@ -156,9 +167,11 @@ By using these MCPs, you accept full responsibility for:
   credentials, your ConnectWise data, or any actions you perform
   through the software.
 - **Local state only.** Cached data (SQLite catalogues, saved queries,
-  browser state for the PSA web scraper) is stored entirely under
-  `~/.config/connectwise-<product>/` on the user's machine. Nothing
-  leaves your environment unless you explicitly ship it.
+  browser state for the PSA and Home web scrapers) is stored entirely
+  under `~/.config/connectwise-<product>/` on the user's machine.
+  Nothing leaves your environment unless you explicitly ship it. The
+  Home MCP additionally persists a Playwright `storageState.json` with
+  OIDC cookies at mode `0o600` — treat this file as sensitive.
 - **Credentials file permissions.** Each MCP refuses to load a `.env`
   file whose permissions allow group/world read. This is a defensive
   default — it's on you to actually `chmod 600` the file and keep it
@@ -168,8 +181,8 @@ By using these MCPs, you accept full responsibility for:
 
 "ConnectWise", "ConnectWise PSA", "ConnectWise Manage", "ConnectWise
 RMM", "ConnectWise Asio", "ConnectWise ScreenConnect", "ConnectWise
-Control", "ConnectWise CPQ", "Quosal", and "Sell" are trademarks or
-registered trademarks of **ConnectWise LLC**.
+Control", "ConnectWise CPQ", "ConnectWise Home", "Quosal", and "Sell"
+are trademarks or registered trademarks of **ConnectWise LLC**.
 
 These packages are **NOT** official ConnectWise products. They are
 **NOT** developed, endorsed, sponsored, certified, or approved by
@@ -181,9 +194,12 @@ with.
 ### ConnectWise API licensing (your own)
 
 To use these MCPs you must hold your own valid ConnectWise PSA,
-ConnectWise RMM, ConnectWise ScreenConnect, and/or ConnectWise CPQ
-license and API credentials, as applicable. These MCPs do not grant,
-transfer, or imply any license to ConnectWise's software or APIs.
+ConnectWise RMM, ConnectWise ScreenConnect, ConnectWise CPQ, and/or
+ConnectWise Home partner-portal access and API credentials, as
+applicable. These MCPs do not grant, transfer, or imply any license to
+ConnectWise's software or APIs. The Home MCP in particular drives the
+partner portal via browser automation; your use must comply with
+ConnectWise's terms for authenticated portal access.
 
 ### AI-assisted operation disclaimer
 
@@ -211,6 +227,7 @@ These MCPs bundle open-source packages governed by their own licenses:
 - [zod](https://github.com/colinhacks/zod) — MIT
 - [express](https://github.com/expressjs/express) — MIT (PSA + RMM MCPs)
 - [js-yaml](https://github.com/nodeca/js-yaml) — MIT (RMM MCP)
+- [playwright](https://github.com/microsoft/playwright) — Apache-2.0 (Home MCP; optional peer dependency)
 
 Full `package-lock.json` files are available on request (open an issue
 mentioning "dependency audit").

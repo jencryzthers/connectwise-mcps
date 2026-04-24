@@ -2,11 +2,12 @@
 
 ## Scope
 
-This repository is the **public issue tracker and landing page** for the three ConnectWise MCPs:
+This repository is the **public issue tracker and landing page** for the four ConnectWise MCPs:
 
 - `@goxtechnologies/connectwise-psa-mcp`
 - `@goxtechnologies/connectwise-rmm-mcp`
 - `@goxtechnologies/connectwise-cpq-mcp`
+- `@goxtechnologies/connectwise-home-mcp` (experimental — browser automation)
 
 Security concerns should be directed to the corresponding product's private security policy:
 
@@ -33,6 +34,7 @@ Security concerns should be directed to the corresponding product's private secu
 - Prompt injection surfaces that escalate capability
 - Dependency-chain CVEs
 - Hook confirmation-gate bypasses (especially on RMM's `cw_rmm_sc_send_command`)
+- Home MCP: OIDC bearer-token leaks through any tool response, `storageState.json` permissions regressions, XHR-capture redaction bypasses, off-origin navigation that escapes the origin allow-list
 
 ## Out of scope
 
