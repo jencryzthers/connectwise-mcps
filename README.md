@@ -217,8 +217,4 @@ rights under applicable consumer protection laws.
 
 This landing repo itself is MIT-licensed (see [LICENSE](./LICENSE)).
 Each npm package ships its own `LICENSE` file — see the tarball
-contents for the authoritative copy.
-
-Copyright © 2024–2026 jencryzthers (maintainer). Published under the
-`@goxtechnologies` npm scope. Packages are MIT-licensed; source code
-is maintained privately by the maintainer.
+contents for the authoritative copy. Source code is maintained privately by the maintainer.
