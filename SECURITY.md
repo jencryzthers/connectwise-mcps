@@ -2,12 +2,7 @@
 
 ## Scope
 
-This repository is the **public issue tracker and landing page** for the four ConnectWise MCPs:
-
-- `@goxtechnologies/connectwise-psa-mcp`
-- `@goxtechnologies/connectwise-rmm-mcp`
-- `@goxtechnologies/connectwise-cpq-mcp`
-- `@goxtechnologies/connectwise-home-mcp` (experimental — browser automation)
+This repository is the **public issue tracker and landing page** for the four ConnectWise MCPs.
 
 Security concerns should be directed to the corresponding product's private security policy:
 
@@ -15,7 +10,7 @@ Security concerns should be directed to the corresponding product's private secu
 
 1. **Use GitHub Security Advisories** on this repo (*Security → Report a vulnerability*). We'll triage and route to the appropriate private repo internally.
 2. Include:
-   - Which package (`@goxtechnologies/connectwise-<product>-mcp`)
+   - Which package
    - Version
    - Description + reproduction steps
    - Impact assessment
