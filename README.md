@@ -50,11 +50,6 @@ asset.
 
 ## Who maintains this? Why is the source private?
 
-These MCPs are maintained **personally by [jencryzthers](https://github.com/jencryzthers)**
-on personal time. **GOX Technologies Inc.** is the npm scope owner
-(the publishing identity) but does not maintain, staff, or fund the
-development — this is not an organisational product.
-
 The source code lives in private repositories under the maintainer's
 personal account. The npm tarballs are distributed under the
 [MIT License](https://opensource.org/licenses/MIT) — you are free to
@@ -77,25 +72,11 @@ PR, contribution), open an issue and we'll discuss.
   this repo, or see [SECURITY.md](./SECURITY.md) for routing to
   per-product policies. **Do not** open a public issue.
 
-## Support the maintainer
-
-These MCPs are maintained by [jencryzthers](https://github.com/jencryzthers)
-personally on personal time. If they save you time or headaches, a
-small contribution is genuinely appreciated:
-
-💰 [**PayPal**](https://www.paypal.com/paypalme/jcproulx) — one-time,
-choose your amount.
-
-Donations go directly to the maintainer, not to GOX Technologies (the
-npm scope owner). Totally optional. **Zero impact on support or issue
-triage** — the MIT "AS IS" clause still applies. Think of it as buying
-the maintainer a coffee.
-
 ---
 
 ## Legal notices and responsibilities
 
-These are the shared terms for all three MCPs in this suite. They
+These are the shared terms for all MCPs in this suite. They
 supplement — and in case of conflict, are subordinate to — the MIT
 License in each package's tarball.
 
@@ -121,7 +102,7 @@ your use of these MCPs. **Use at your own risk.**
 
 ### Experimental software
 
-These MCPs are an active experiment in AI-assisted MSP operations. The
+These MCPs are an personnal active experiment in AI-assisted MSP operations. The
 core tools (API calls, ticket/device/quote queries, named operations)
 are well-tested and used daily by the maintainer. Many analytics
 handlers and advanced features have seen limited real-world testing.
