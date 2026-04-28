@@ -11,12 +11,12 @@ Security issues follow coordinated disclosure — see [SECURITY.md](./SECURITY.m
 
 ## Packages
 
-| Product | npm package | Install |
+| Product | npm Package |
 |---|---|---|
-| **ConnectWise PSA** (Manage) | [`@goxtechnologies/connectwise-psa-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-psa-mcp) | `npx -y @goxtechnologies/connectwise-psa-mcp` |
-| **ConnectWise RMM** (Asio) + ScreenConnect | [`@goxtechnologies/connectwise-rmm-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-rmm-mcp) | `npx -y @goxtechnologies/connectwise-rmm-mcp` |
-| **ConnectWise CPQ** (Quosal Sell) | [`@goxtechnologies/connectwise-cpq-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-cpq-mcp) | `npx -y @goxtechnologies/connectwise-cpq-mcp` |
-| **ConnectWise Home** (partner identity portal) | [`@goxtechnologies/connectwise-home-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-home-mcp) | `npx -y @goxtechnologies/connectwise-home-mcp` |
+| **ConnectWise PSA** (Manage) | [`connectwise-psa-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-psa-mcp) |
+| **ConnectWise RMM** (Asio) + ScreenConnect | [`connectwise-rmm-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-rmm-mcp) |
+| **ConnectWise CPQ** (Quosal Sell) | [`connectwise-cpq-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-cpq-mcp) | 
+| **ConnectWise Home** (partner identity portal) | [`@connectwise-home-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-home-mcp) | 
 
 Each MCP is a [Model Context Protocol](https://modelcontextprotocol.io)
 server that lets AI assistants (Claude Desktop, Claude Code, any
