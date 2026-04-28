@@ -1,10 +1,7 @@
 # ConnectWise MCPs — issue tracker & landing page
 
 Public issue tracker and landing page for four MCP (Model Context Protocol)
-servers **maintained personally by [jencryzthers](https://github.com/jencryzthers)**
-and published on npm under the
-[`@goxtechnologies`](https://www.npmjs.com/~goxtechnologies) scope (the
-publishing identity). The source code is maintained in private
+servers. The source code is maintained in private
 repositories; the npm tarballs are released under the MIT License.
 
 If you're looking for bug reports, feature requests, or general questions
@@ -19,19 +16,13 @@ Security issues follow coordinated disclosure — see [SECURITY.md](./SECURITY.m
 | **ConnectWise PSA** (Manage) | [`@goxtechnologies/connectwise-psa-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-psa-mcp) | `npx -y @goxtechnologies/connectwise-psa-mcp` |
 | **ConnectWise RMM** (Asio) + ScreenConnect | [`@goxtechnologies/connectwise-rmm-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-rmm-mcp) | `npx -y @goxtechnologies/connectwise-rmm-mcp` |
 | **ConnectWise CPQ** (Quosal Sell) | [`@goxtechnologies/connectwise-cpq-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-cpq-mcp) | `npx -y @goxtechnologies/connectwise-cpq-mcp` |
-| **ConnectWise Home** (partner identity portal) — *experimental* | [`@goxtechnologies/connectwise-home-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-home-mcp) | `npx -y @goxtechnologies/connectwise-home-mcp` |
+| **ConnectWise Home** (partner identity portal) | [`@goxtechnologies/connectwise-home-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-home-mcp) | `npx -y @goxtechnologies/connectwise-home-mcp` |
 
 Each MCP is a [Model Context Protocol](https://modelcontextprotocol.io)
 server that lets AI assistants (Claude Desktop, Claude Code, any
 MCP-aware client) interact with the corresponding ConnectWise product.
 
-**ConnectWise Home** is flagged as experimental because it targets
-`home.connectwise.com` — a portal with **no public API**. The package
-uses Playwright to drive an authenticated browser session, reuses the
-portal's own OIDC bearer token for API calls, and scrapes the Salesforce
-Experience Cloud DOM for partner-support cases. Requires Playwright as
-an optional peer dependency (`npm install playwright && npx playwright
-install chromium`).
+**All MCP** are flagged as experimental.
 
 ### Claude Desktop Extension (.dxt) bundles
 
@@ -42,7 +33,7 @@ product so you can find the one you want:
 - `psa-vX.Y.Z` → ConnectWise PSA
 - `rmm-vX.Y.Z` → ConnectWise RMM + ScreenConnect
 - `cpq-vX.Y.Z` → ConnectWise CPQ
-- `home-vX.Y.Z` → ConnectWise Home (experimental)
+- `home-vX.Y.Z` → ConnectWise Home
 
 Every release here mirrors an npm publish of the matching package —
 same version, same code, with the prebuilt `.dxt` attached as a release
