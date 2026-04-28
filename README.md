@@ -12,7 +12,7 @@ Security issues follow coordinated disclosure — see [SECURITY.md](./SECURITY.m
 ## Packages
 
 | Product | npm Package |
-|---|---|---|
+|---|---|
 | **ConnectWise PSA** (Manage) | [`connectwise-psa-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-psa-mcp) |
 | **ConnectWise RMM** (Asio) + ScreenConnect | [`connectwise-rmm-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-rmm-mcp) |
 | **ConnectWise CPQ** (Quosal Sell) | [`connectwise-cpq-mcp`](https://www.npmjs.com/package/@goxtechnologies/connectwise-cpq-mcp) | 
